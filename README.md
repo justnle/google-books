@@ -45,13 +45,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 To use the deployed application, click [here](https://jle-google-books.herokuapp.com/)
 
-### Interaction
+## Interaction
 
 The user can input a title or author, and hit the 'Search' button to bring up a list of results. Each result will display a 'View' and 'Save' button. Clicking view will open a new tab for the book's Google Play Store page and clicking save will store the book's information using MongoDB. The saved books data will be displayed on the 'saved' page, where the user can remove it from the list/database by hitting the 'Delete' button.
 
 ### Screenshots
 
-![google-books-screenshot](https://github.com/twopcz/google-books/blob/master/assets/images/gb-ss.png?raw=true)
+![google-books-screenshot](https://github.com/twopcz/google-books/blob/master/assets/images/gb-ss-big.png?raw=true)
 
 # Technologies
 
