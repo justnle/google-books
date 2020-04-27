@@ -3,9 +3,9 @@ import React from 'react';
 function Nav() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a className="navbar-brand">
+            <span className="navbar-brand">
                 Google Books
-            </a>
+            </span>
             <ul className="navbar-nav">
                 <li className="nav-item">
                     <a className="nav-link" href="/">search</a>
