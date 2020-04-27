@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default {
-    getBooks() {
+    getSaved() {
         return axios.get(`/api/books`);
     },
     deleteBook(id) {
