@@ -20,7 +20,11 @@ function Books() {
       .catch((err) => console.error(err));
   }
 
-  function saveBook() {}
+  function saveBook(bookData) {
+      API.saveBook(bookData)
+      .then(() => console.log(`saved book`))
+      .catch(err => console.error(err));
+  }
 
   return (
     <Container fluid>
@@ -78,8 +82,14 @@ function Books() {
                     </a>
                     <button
                       type='button'
-                      class='btn btn-info'
-                      onClick={saveBook(book.id)}
+                      className='btn btn-info'
+                      onClick={() => saveBook({
+                          title: book.volumeInfo.title,
+                          author: book.volumeInfo.authors[0],
+                          description: book.volumeInfo.description,
+                          image: book.volumeInfo.imageLinks.thumbnail,
+                          link: book.volumeInfo.infoLink
+                      })}
                     >
                       Save
                     </button>
