@@ -83,8 +83,10 @@ function Books() {
                     <button
                       type='button'
                       className='btn btn-info'
-                      onClick={() => saveBook({
+                      onClick={() => 
+                      saveBook({
                           title: book.volumeInfo.title,
+                          id: book.id,
                           author: book.volumeInfo.authors[0],
                           description: book.volumeInfo.description,
                           image: book.volumeInfo.imageLinks.thumbnail,
