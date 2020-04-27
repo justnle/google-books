@@ -5,27 +5,22 @@ import API from '../utils/API';
 import Jumbotron from '../components/Jumbotron';
 
 function Books() {
-  // Setting our component's initial state
   const [books, setBooks] = useState([]);
   const [formObject, setFormObject] = useState({});
 
-  // Handles updating component state when the user types into the input field
   function handleInputChange(event) {
     const { name, value } = event.target;
     setFormObject({ ...formObject, [name]: value });
   }
 
-  // When the form is submitted, use the API.searchBook method to search by title
   function handleFormSubmit(event) {
     event.preventDefault();
     API.searchBook(formObject.title)
-      .then(res => setBooks(res.data.items))
+      .then((res) => setBooks(res.data.items))
       .catch((err) => console.error(err));
   }
 
-  function saveBook() {
-
-  }
+  function saveBook() {}
 
   return (
     <Container fluid>
@@ -73,16 +68,29 @@ function Books() {
                       {book.volumeInfo.authors}
                     </h6>
                     <p className='card-text'>{book.volumeInfo.description}</p>
-                    <a href={book.volumeInfo.infoLink} className='btn btn-primary' target='_blank' rel='noopener noreferrer'>
+                    <a
+                      href={book.volumeInfo.infoLink}
+                      className='btn btn-primary'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
                       View
                     </a>
-                    <button type='button' class='btn btn-info' onClick={saveBook(book.id)}>Save</button>
+                    <button
+                      type='button'
+                      class='btn btn-info'
+                      onClick={saveBook(book.id)}
+                    >
+                      Save
+                    </button>
                   </div>
                 </Col>
               </div>
             ))
           ) : (
-            <h3>No Results to Display</h3>
+            <div className='text-center'>
+              <h3>No Results to Display</h3>
+            </div>
           )}
         </div>
       </Row>
