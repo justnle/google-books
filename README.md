@@ -1,10 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Google Books Search
 
-## Available Scripts
+A book search engine that utilizes Google's Books API, which allows the user to search for a book (initially by title, but I found that author works as well) which they can save to a 'saved books list' or view the book(s) in the Google Play Store. The application displays a picture of the cover accompanied by the title, author(s), and a brief description.
+
+## Usage
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,12 +16,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
+#### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### `npm run build`
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -27,7 +31,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+#### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -37,32 +41,53 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## View
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To use the deployed application, click [here](https://jle-google-books.herokuapp.com/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Interaction
 
-### Code Splitting
+The user can input a title or author, and hit the 'Search' button to bring up a list of results. Each result will display a 'View' and 'Save' button. Clicking view will open a new tab for the book's Google Play Store page and clicking save will store the book's information using MongoDB. The saved books data will be displayed on the 'saved' page, where the user can remove it from the list/database by hitting the 'Delete' button.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Screenshots
 
-### Analyzing the Bundle Size
+![google-books-screenshot](https://github.com/twopcz/google-books/blob/master/assets/images/gb-ss.png?raw=true)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+# Technologies
 
-### Making a Progressive Web App
+This application was built with:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- JavaScript
+- [React.js](https://reactjs.org/)
+- [Express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Node](https://nodejs.org/en/)
 
-### Advanced Configuration
+The dependencies required:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```
+"dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.7",
+    "if-env": "^1.0.4"
+  }
+```
 
-### Deployment
+Documentation on dependencies:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+- [axios](https://github.com/axios/axios)
+- [if-env](https://github.com/ericclemmons/if-env#readme)
+- [mongoose](https://mongoosejs.com/docs/guide.html)
 
-### `npm run build` fails to minify
+# Enhancements
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+I plan to improve the frontend as it is currently very basic and 'bootstrappy.' I also have two known bugs at the moment, one where the book has multiple authors and the other being that the same book can be saved multiple times. I plan to correct the functionality of the application to remove those bugs.
+
+# References
+
+- UW Coding Bootcamp for providing the example application that this application was based on.
+
+# License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
